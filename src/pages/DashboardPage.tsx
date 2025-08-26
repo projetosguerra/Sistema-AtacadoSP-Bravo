@@ -1,6 +1,4 @@
-import React, { useState, useEffect} from 'react';
-import Sidebar from '../components/Sidebar';
-import Header from '../components/Header';
+import React, { useState, useEffect } from 'react';
 import StatsCard from '../components/StatsCard';
 import VolumeChart from '../components/LineChart';
 import StatusChart from '../components/DonutChart';
@@ -22,7 +20,7 @@ const DashboardPage = () => {
         setNovosPedidos(0);
       });
   }, []);
-  
+
   return (
     <main className="flex-1 overflow-x-hidden">
       {/* Stats Cards */}

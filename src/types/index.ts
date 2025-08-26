@@ -42,3 +42,12 @@ export interface UnitFinancials {
   saldoDisponivel: number;
   historico: LimitChangeLog[];
 }
+
+export interface Products {
+  id: string;
+  nome: string;
+  descricao: string;
+  preco: number;
+  imageUrl: string;
+  unit: string;
+}
