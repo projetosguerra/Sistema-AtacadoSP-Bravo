@@ -7,7 +7,8 @@ import {
   Users,
   DollarSign,
   FileText,
-  LogOut
+  LogOut,
+  Store
 } from 'lucide-react';
 
 const Sidebar = () => {
@@ -21,6 +22,7 @@ const Sidebar = () => {
     { icon: Users, label: 'Gerenciamento de Usuários', path: '/gerenciamento-usuarios' },
     { icon: DollarSign, label: 'Controle Financeiro', path: '/controle-financeiro' },
     { icon: FileText, label: 'Relatórios', path: '/relatorios' },
+    { icon: Store, label: 'Catálogo de Produtos', path: '/catalogo-produtos' },
   ];
 
   return (
@@ -40,8 +42,8 @@ const Sidebar = () => {
               <Link
                 to={item.path}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${currentPath === item.path
-                    ? 'bg-gray-100 text-gray-900 font-semibold'
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                  ? 'bg-gray-100 text-gray-900 font-semibold'
+                  : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                   }`}
               >
                 <item.icon className="w-5 h-5" />

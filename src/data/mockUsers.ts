@@ -28,7 +28,7 @@ export const mockUsers: User[] = [
     numeroSequencia: 3,
     primeiroNome: "Maria",
     ultimoNome: "Silva",
-    genero: "Feminino", 
+    genero: "Feminino",
     idFuncionario: "0247BHS",
     numeroTelefone: "08131111111",
     cargo: "Solicitante",
@@ -41,7 +41,7 @@ export const mockUsers: User[] = [
     ultimoNome: "Santos",
     genero: "Masculino",
     idFuncionario: "0248CIT",
-    numeroTelefone: "08132222222", 
+    numeroTelefone: "08132222222",
     cargo: "Aprovador",
     designacao: "Financeiro"
   },
@@ -53,7 +53,7 @@ export const mockUsers: User[] = [
     genero: "Feminino",
     idFuncionario: "0249DJU",
     numeroTelefone: "08133333333",
-    cargo: "Solicitante", 
+    cargo: "Solicitante",
     designacao: "Logística"
   }
 ];
