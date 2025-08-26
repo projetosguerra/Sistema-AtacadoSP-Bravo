@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import StatsCard from '../components/StatsCard';
@@ -9,17 +9,30 @@ import RecentActivities from '../components/RecentActivities';
 import { Clock, DollarSign, Package, AlertTriangle } from 'lucide-react';
 
 const DashboardPage = () => {
+  const [novosPedidos, setNovosPedidos] = useState<number | string>('...');
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(data => {
+        setNovosPedidos(data.length);
+      })
+      .catch(error => {
+        console.error("Erro ao buscar dados da API:", error);
+        setNovosPedidos(0);
+      });
+  }, []);
+  
   return (
     <main className="flex-1 overflow-x-hidden">
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <StatsCard
-          title="Pedidos Pendentes"
-          value="250"
-          subtitle="50 a mais desde o último registro"
-          icon={Clock}
-          iconBgColor="bg-yellow-500"
-          changeType="positive"
+          title="Novos Pedidos"
+          value={novosPedidos.toString()}
+          subtitle="Quantidade de pedidos no dia de hoje"
+          icon={Package}
+          iconBgColor="bg-pink-500"
         />
         <StatsCard
           title="Valor total aprovado"

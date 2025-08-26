@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, FileText, TrendingDown, DollarSign, Edit } from 'lucide-react';
 import { UnitFinancials } from '../types';
 import { mockFinancialData } from '../data/mockFinancials';
-import EditLimitModal from '../components/EditLimitModal';
+import EditLimitModal from '../components/EditLimitModal.tsx';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 
