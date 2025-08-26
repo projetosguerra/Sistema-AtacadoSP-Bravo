@@ -14,6 +14,11 @@ Protótipo funcional e navegável desenvolvido para a Bravo, demonstrando a inte
     - [x] Gerenciamento de Usuários (visualização, busca e filtro).
     - [x] Painel de Aprovação de Pedidos.
     - [x] Controle Financeiro para Unidades Administrativas.
+    - [x] Catálogo de Pedidos (Interface visual)
+    - [ ] Carrinho de compras
+    - [ ] Fluxo completo de compra
+    - [ ] API Rest -> Database
+    - [ ] Inventário / Estoque
 - [ ] **Perfil de Aprovador** (em desenvolvimento)
 - [ ] **Perfil de Solicitante** (em desenvolvimento)
 
