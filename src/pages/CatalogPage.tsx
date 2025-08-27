@@ -11,7 +11,7 @@ const CatalogPage: React.FC = () => {
     const filteredProducts = mockProducts;
 
     return (
-        <div>
+        <div className='space-y-9'>
             {/* Page Header */}
             <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold text-gray-900">Catálogo de Produtos</h1>
@@ -36,21 +36,19 @@ const CatalogPage: React.FC = () => {
                 </div>
             </div>
 
-            <main className="flex-1 overflow-x-hidden overflow-y-auto p-6">
-                {/* Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {filteredProducts.map(product => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
-                </div>
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {filteredProducts.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
 
-                {/* Empty State (if no products) */}
-                {filteredProducts.length === 0 && (
-                    <div className="text-center py-12">
-                        <p className="text-gray-500">Nenhum produto encontrado para a categoria selecionada.</p>
-                    </div>
-                )}
-            </main>
+            {/* Empty State (if no products) */}
+            {filteredProducts.length === 0 && (
+                <div className="text-center py-12">
+                    <p className="text-gray-500">Nenhum produto encontrado para a categoria selecionada.</p>
+                </div>
+            )}
         </div>
     );
 };
